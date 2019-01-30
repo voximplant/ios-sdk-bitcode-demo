@@ -34,7 +34,7 @@ class Voximplant
 
     Net::HTTP.start(url_base) do |http|
       response = http.request_head(URI.escape(url_path))
-      unless response.code == 200
+      unless response.code == "200"
         raise "Failed to download #{title}!".red
       end
       pbar = ProgressBar.create(:title => title, :total => response['content-length'].to_i)
