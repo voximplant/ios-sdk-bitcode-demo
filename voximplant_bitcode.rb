@@ -38,7 +38,7 @@ class Voximplant
         raise "Failed to download #{title}!".red
       end
       pbar = ProgressBar.create(:title => title, :total => response['content-length'].to_i)
-      File.open(out, 'w') {|f|
+      File.open(out, 'w') { |f|
         http.get(URI.escape(url_path)) do |str|
           f.write str
           counter += str.length
@@ -77,22 +77,18 @@ class Voximplant
         raise "Version mismatch"
       end
 
-      webrtc = spec.dependencies.find {|dep| dep.name == "VoxImplantWebRTC"}
+      webrtc = nil
+      spec.subspecs.find do |subspec|
+        webrtc = subspec.dependencies.find do |dep|
+          dep.name == "VoxImplantWebRTC"
+        end
+      end
+
       webrtc_version = Pod::Requirement.parse(webrtc.requirement)[1]
+      puts webrtc_version
 
       puts "Voximplant iOS SDK v#{sdk_version} ... OK".green
       return webrtc_version
-    rescue
-      puts "Downloading Voximplant iOS SDK v#{sdk_version}".yellow
-
-      url = "https://s3.eu-central-1.amazonaws.com/voximplant-releases/ios-sdk/#{sdk_version}/VoxImplant_bitcode.zip"
-      zip = "#{pods_path}/VoxImplantSDK.zip"
-      download "Voximpant iOS SDK", url, zip
-
-      puts "Unpacking".yellow
-      extract_zip zip, sdk_path
-
-      return check_sdk_version pods_path, sdk_version
     end
   end
 
