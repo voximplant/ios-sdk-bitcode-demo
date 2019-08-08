@@ -85,10 +85,20 @@ class Voximplant
       end
 
       webrtc_version = Pod::Requirement.parse(webrtc.requirement)[1]
-      puts webrtc_version
 
       puts "Voximplant iOS SDK v#{sdk_version} ... OK".green
       return webrtc_version
+    rescue
+      puts "Downloading Voximplant iOS SDK v#{sdk_version}".yellow
+
+      url = "https://s3.eu-central-1.amazonaws.com/voximplant-releases/ios-sdk/#{sdk_version}/VoxImplant_bitcode.zip"
+      zip = "#{pods_path}/VoxImplantSDK.zip"
+      download "Voximpant iOS SDK", url, zip
+
+      puts "Unpacking".yellow
+      extract_zip zip, sdk_path
+
+      return check_sdk_version pods_path, sdk_version
     end
   end
 
