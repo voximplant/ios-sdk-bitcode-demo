@@ -3,7 +3,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 def voximplant
-  sdk_version = '2.25.2'
+  sdk_version = '2.26.0'
 
   require_relative 'voximplant_bitcode'
   Voximplant::prepare_voximplant_pods sdk_version
