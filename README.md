@@ -1,6 +1,6 @@
 # Voximplant Bitcode Demo
 
-This repository contains example of how to include [Bitcode](https://voximplant.com/docs/references/iossdk/bitcode) version of Voximplant iOS SDK.
+This repository contains example of how to include [Bitcode](https://voximplant.com/docs/howtos/advanced/bitcode) version of Voximplant iOS SDK.
 
 ## Using helper
 
