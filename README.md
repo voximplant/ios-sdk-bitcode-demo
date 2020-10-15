@@ -10,7 +10,7 @@ This repository contains example of how to include [Bitcode](https://voximplant.
 
     ```ruby
     def voximplant
-        sdk_version = '2.18.0'
+        sdk_version = '2.34.3'
 
         require_relative 'voximplant_bitcode'
         Voximplant::prepare_voximplant_pods sdk_version
@@ -20,7 +20,7 @@ This repository contains example of how to include [Bitcode](https://voximplant.
     end
     ```
 
-4. Change `pod 'VoxImplantSDK', '~> 2.18.0'` lines to `voximplant`
+4. Change `pod 'VoxImplantSDK'` lines to `voximplant`
 5. Run this commands
 
     ```bash
@@ -32,7 +32,7 @@ This repository contains example of how to include [Bitcode](https://voximplant.
 ## Manually
 
 1. Download and extract [Voximplant iOS SDK][sdk] and [Voximplant WebRTC][webrtc]
-2. Edit your `Podfile` by replacing `pod 'VoxImplantSDK', '~> 2.18.0'` lines by:
+2. Edit your `Podfile` by replacing `pod 'VoxImplantSDK'` lines by:
 
     ```ruby
     pod 'VoxImplantSDK', :path => "Path/To/Extracted/VoxImplant_bitcode"
@@ -41,5 +41,5 @@ This repository contains example of how to include [Bitcode](https://voximplant.
 3. Run `pod install`
 4. Open generated .xcworkspace
 
-[sdk]: https://s3.eu-central-1.amazonaws.com/voximplant-releases/ios-sdk/2.18.0/VoxImplant_bitcode.zip
-[webrtc]: https://s3.eu-central-1.amazonaws.com/voximplant-releases/ios-webrtc/66.0.3/VoxImplantWebRTC_bitcode.zip
+[sdk]: https://s3.eu-central-1.amazonaws.com/voximplant-releases/ios-sdk/2.34.3/VoxImplant_bitcode.zip
+[webrtc]: https://s3.eu-central-1.amazonaws.com/voximplant-releases/ios-webrtc/78.5.0/VoxImplantWebRTC_bitcode.zip
