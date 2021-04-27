@@ -66,7 +66,7 @@ static NSString *const kPassword = @"";
 #pragma mark - VIClientSessionDelegate
 - (void)clientSessionDidConnect:(VIClient *)client {
     NSLog(@"Connection established");
-    [_client loginWithUser:kUsername password:kPassword success:^(NSString * _Nonnull displayName, VIAuthParams * _Nonnull authParams) {
+    [_client loginWithUser:kUsername password:kPassword success:^(NSString *_Nonnull displayName, VIAuthParams *_Nullable authParams) {
     } failure:^(NSError * _Nonnull error) {
         NSLog(@"Login failed: %@", error.localizedDescription);
     }];
