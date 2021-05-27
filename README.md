@@ -10,7 +10,7 @@ This repository contains example of how to include [Bitcode](https://voximplant.
 
     ```ruby
     def voximplant
-        sdk_version = '2.34.3'
+        sdk_version = '2.39.0'
 
         require_relative 'voximplant_bitcode'
         Voximplant::prepare_voximplant_pods sdk_version

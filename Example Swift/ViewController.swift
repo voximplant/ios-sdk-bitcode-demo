@@ -2,7 +2,7 @@
  *  Copyright (c) 2011-2019, Zingaya, Inc. All rights reserved.
  */
 import UIKit
-import VoxImplant
+import VoxImplantSDK
 
 @objc class ViewController: UIViewController {
     #error("Enter Voximplant account credentials")
