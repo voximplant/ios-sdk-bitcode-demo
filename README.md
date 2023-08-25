@@ -1,5 +1,9 @@
 # Voximplant Bitcode Demo
 
+### ⚠️ Deprecation ⚠️
+Since Apple is [deprecating bitcode tecnology](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes#Deprecations), ios-sdk-bitcode-demo is deprecated as well.
+For nonbitcode demo, please check: [ios-sdk-swift-demo](https://github.com/voximplant/ios-sdk-swift-demo)
+
 This repository contains example of how to include [Bitcode](https://voximplant.com/docs/howtos/advanced/bitcode) version of Voximplant iOS SDK.
 
 ## Using helper
